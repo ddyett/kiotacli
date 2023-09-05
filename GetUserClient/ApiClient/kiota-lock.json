@@ -1,0 +1,36 @@
+{
+  "descriptionHash": "D1C8A859507546856B27A01B5A00264D6DBD90983D8727D993C1B421111EC99CD22823BB0B8B953E96526CF5E882473A586FA4C84A856404BE5D830A014AD560",
+  "descriptionLocation": "https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/v1.0/openapi.yaml",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.6.0-preview.202308240001",
+  "clientClassName": "GetUserApiClient",
+  "clientNamespaceName": "GetUserClient.ApiClient",
+  "language": "CLI",
+  "usesBackingStore": false,
+  "includeAdditionalData": false,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain",
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
+  ],
+  "includePatterns": [
+    "/me#GET",
+    "/me/directReports",
+    "/users#GET",
+    "/users/{user-id}#GET"
+  ],
+  "excludePatterns": [],
+  "disabledValidationRules": []
+}

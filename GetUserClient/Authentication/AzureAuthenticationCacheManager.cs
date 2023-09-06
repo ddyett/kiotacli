@@ -36,7 +36,7 @@ public class AzureAuthenticationCacheManager : IAuthenticationCacheManager
         {
             return await JsonSerializer.DeserializeAsync<ConfigurationRoot>(fileStream, cancellationToken: cancellationToken);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             return null;
         }
@@ -121,7 +121,7 @@ public class AzureAuthenticationCacheManager : IAuthenticationCacheManager
 
         if (!options.Strategy.IsPrivateClient())
         {
-            MsalCacheHelper cacheHelper = await this.GetProtectedCacheHelperAsync("MicrosoftGraph");
+            MsalCacheHelper cacheHelper = await this.GetProtectedCacheHelperAsync("AzureCache");
             app = PublicClientApplicationBuilder.Create(clientId).Build();
             cacheHelper.RegisterCache(app.UserTokenCache);
             using IEnumerator<IAccount> accountsIter = (await app.GetAccountsAsync()).GetEnumerator();

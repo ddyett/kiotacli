@@ -49,7 +49,7 @@ public class AzureAuthenticationServiceFactory
             DisableAutomaticAuthentication = true,
         };
 
-        TokenCachePersistenceOptions tokenCacheOptions = new() { Name = Constants.TokenCacheName };
+        TokenCachePersistenceOptions tokenCacheOptions = new() { Name = Constants.TokenCacheName};
         credOptions.TokenCachePersistenceOptions = tokenCacheOptions;
         credOptions.AuthenticationRecord = await _authenticationCacheManager.ReadAuthenticationRecordAsync(cancellationToken);
 
